@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.homeIrController.MainActivity">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/title_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnTVPower"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="TVPower"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <Button
+            android:id="@+id/btnHeaterPower"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="HeaterPower"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <Button
+            android:id="@+id/btnOscillate"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="Oscillate"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="137dp" />
+
+        <Button
+            android:id="@+id/btnHeatUp"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="HeatUp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="233dp" />
+
+        <Button
+            android:id="@+id/btnHeatDown"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="HeatDown"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+        <Button
+            android:id="@+id/btnVolumeUp"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="VolumeUp"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+        <Button
+            android:id="@+id/btnVolumeDown"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:onClick="sendIr"
+            android:text="VolumeDown"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="354dp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
