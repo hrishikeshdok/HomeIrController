@@ -109,7 +109,7 @@ public class VolumeStepController implements ApplianceController {
         if (instance == null)
         {
             instance = new VolumeStepController();
-            irBlaster = IrBlaster.newInstance();
+            irBlaster = IrBlaster.getInstance();
         }
         return instance;
     }

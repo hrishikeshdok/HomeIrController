@@ -14,7 +14,7 @@ public class IrBlaster {
     private IrBlaster()
     {}
 
-    public static IrBlaster newInstance()
+    public static IrBlaster getInstance()
     {
         if (instance == null)
         {
@@ -30,7 +30,27 @@ public class IrBlaster {
     {
         if (irManager != null && irManager.hasIrEmitter()) {
             Log.i(TAG, "Device has IR Emitter");
-            irManager.transmit(CARRIER_FREQUENCY, pattern);
+            irManager.transmit(DEFAULT_CARRIER_FREQUENCY, pattern);
+            Log.i(TAG, "Successfully Sent IR Pattern");
+            return true;
+        }
+        else {
+            Log.i(TAG, "Device does not have IR");
+            return false;
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public boolean sendIr(ConsumerIrManager irManager,
+                          int [] pattern,
+                          int carrierFrequency,
+                          int blastCount)
+    {
+        if (irManager != null && irManager.hasIrEmitter()) {
+            Log.i(TAG, "Device has IR Emitter");
+            for (int i=0;i<blastCount; i++) {
+                irManager.transmit(carrierFrequency, pattern);
+            }
             Log.i(TAG, "Successfully Sent IR Pattern");
             return true;
         }
@@ -42,5 +62,5 @@ public class IrBlaster {
 
     private static IrBlaster instance;
     private static final String TAG = "IRBLASTER";
-    private static final int CARRIER_FREQUENCY = 38000;
+    public static final int DEFAULT_CARRIER_FREQUENCY = 38000;
 }

@@ -43,7 +43,7 @@ public class PowerController implements ApplianceController {
         if (instance == null)
         {
             instance = new PowerController();
-            irBlaster = IrBlaster.newInstance();
+            irBlaster = IrBlaster.getInstance();
         }
         return instance;
     }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1038983068758",
+    "firebase_url": "https://homeircontroller.firebaseio.com",
+    "project_id": "homeircontroller",
+    "storage_bucket": "homeircontroller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038983068758:android:4164b093b8b5d08a",
+        "android_client_info": {
+          "package_name": "com.homeIrController"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038983068758-a7q8ivgj4apj8c5rvakd651i0jq8rbk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf1D4EQYMG88PrmXsEgQLvlAi8QkQHFyY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

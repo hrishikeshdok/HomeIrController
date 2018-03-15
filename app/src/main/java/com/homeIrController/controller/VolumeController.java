@@ -109,7 +109,7 @@ public class VolumeController implements ApplianceController {
         if (instance == null)
         {
             instance = new VolumeController();
-            irBlaster = IrBlaster.newInstance();
+            irBlaster = IrBlaster.getInstance();
         }
         return instance;
     }
